@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 60px;
+  background-color: #020014;
+  color: snow;
+}
+
+.gif-form {
+  display: flex;
+  align-items: center;
+}
+
+.gif-form__input,
+.gif-form__button {
+  font-size: 17px;
+  border: none;
+  padding: 10px 20px;
+  line-height: 1.5;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.gif-form__button {
+  background-color: rgb(43, 184, 24);
+  color: white;
+  font-weight: bolder;
+  margin-left: 5px;
+  width: 70px;
+}
+
+.gif-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+@media screen and (min-width: 480px) {
+  .gif-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.gif-list__item figure {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.gif-list__item img {
+  height: 100%;
+  width: 100%;
+}
+
+.gif-list__item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  color: white;
+  font-weight: bolder;
+  line-height: 2;
+  text-align: center;
+  text-transform: capitalize;
 }
